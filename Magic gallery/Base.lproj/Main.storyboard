@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Qjd-Nu-R66">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--图片查看器-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ShouyeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KkV-9C-Pyo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIZ-in-Xha">
+                                <rect key="frame" x="180" y="252" width="64" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YIZ-in-Xha" secondAttribute="height" multiplier="1:1" id="LOU-Tg-Yhj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="51" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="14" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="自选模式" backgroundImage="resizeApi (1)">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFf-fS-gcp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE9-7e-WDD">
+                                <rect key="frame" x="84" y="252" width="64" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EE9-7e-WDD" secondAttribute="height" multiplier="1:1" id="LZk-9f-4ou"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="浏览模式" backgroundImage="resizeApi (2)">
+                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0JR-fx-ZuD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YIZ-in-Xha" firstAttribute="width" secondItem="EE9-7e-WDD" secondAttribute="width" id="Efu-Vd-6AW"/>
+                            <constraint firstItem="EE9-7e-WDD" firstAttribute="width" secondItem="KkV-9C-Pyo" secondAttribute="width" multiplier="0.2" id="S2T-Mp-72p"/>
+                            <constraint firstItem="KkV-9C-Pyo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VbS-Vz-c1w"/>
+                            <constraint firstItem="YIZ-in-Xha" firstAttribute="centerY" secondItem="EE9-7e-WDD" secondAttribute="centerY" id="Yy2-6W-ep7"/>
+                            <constraint firstItem="KkV-9C-Pyo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="g00-0a-urF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YIZ-in-Xha" secondAttribute="trailing" constant="60" id="hdy-OV-m1R"/>
+                            <constraint firstItem="EE9-7e-WDD" firstAttribute="centerY" secondItem="KkV-9C-Pyo" secondAttribute="centerY" id="imp-kl-ir9"/>
+                            <constraint firstItem="KkV-9C-Pyo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kbw-kI-i5C"/>
+                            <constraint firstItem="KkV-9C-Pyo" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="sqD-7v-s4p"/>
+                            <constraint firstItem="EE9-7e-WDD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="vI6-iw-z5G"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="图片查看器" id="C8B-rQ-g76">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="awU-4d-rxM">
+                            <connections>
+                                <action selector="backIamgeviewBtnAction:" destination="BYZ-38-t0r" id="Pi6-f5-LtT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wmv-fp-fKL">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="nextBtnAction:" destination="BYZ-38-t0r" id="ttM-3m-dab"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backImageView" destination="KkV-9C-Pyo" id="ib1-0I-NuS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614.39999999999998" y="406.12"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bc3-Fo-otQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qjd-Nu-R66" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="geH-QG-NyX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oRX-95-Fty"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8r-jm-8DD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243.73333333333332" y="406.12"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="resizeApi (1)" width="128" height="128"/>
+        <image name="resizeApi (2)" width="128" height="128"/>
+    </resources>
+</document>
